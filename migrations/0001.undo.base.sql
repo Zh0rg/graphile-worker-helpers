@@ -1,2 +1,1 @@
-DROP SCHEMA graphile_worker_extension CASCADE;
-
+DROP SCHEMA graphile_worker_helpers CASCADE;

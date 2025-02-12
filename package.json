@@ -1,7 +1,7 @@
 {
-  "name": "graphile-worker-extension",
+  "name": "graphile-worker-helpers",
   "version": "1.0.0",
-  "description": "An extension of the graphile-worker package adding job hierarchy similar to BullMQ's Flow",
+  "description": "Helpers for graphile-worker that add job dependencies (hierarchical workflows) and support saving intermediary results for improved job recovery and progress management.",
   "packageManager": "pnpm@9.5.0",
   "repository": {
     "type": "git",

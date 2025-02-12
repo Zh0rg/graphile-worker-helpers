@@ -8,7 +8,7 @@ const MIGRATIONS_FOLDER = join(dirname(__dirname), "migrations");
 
 const getPostgrator = async (pgClient: PoolClient) => {
   await pgClient.query(
-    /* sql */ `CREATE SCHEMA IF NOT EXISTS graphile_worker_extension`
+    /* sql */ `CREATE SCHEMA IF NOT EXISTS graphile_worker_helpers`
   );
 
   const {
@@ -21,7 +21,7 @@ const getPostgrator = async (pgClient: PoolClient) => {
     driver: "pg",
     database: currentDatabase,
     migrationPattern: join(MIGRATIONS_FOLDER, "*"),
-    schemaTable: "graphile_worker_extension.migrations",
+    schemaTable: "graphile_worker_helpers.migrations",
     execQuery: (sql) => pgClient.query(sql),
   });
 };

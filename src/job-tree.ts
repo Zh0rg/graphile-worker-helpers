@@ -92,7 +92,7 @@ const insertJobDependencies = (
   );
 
   return pgClient.query<{ id: bigint }>(
-    /* sql */ `INSERT INTO graphile_worker_extension.job_dependencies (${PARAMETERS_NAMES.map(
+    /* sql */ `INSERT INTO graphile_worker_helpers.job_dependencies (${PARAMETERS_NAMES.map(
       (parameter) => pgClient.escapeIdentifier(parameter)
     ).join(", ")}) VALUES ${valueParameters} RETURNING id`,
     values
@@ -147,7 +147,7 @@ export const addJobTree =
 
       await pgClient.query(
         /* sql */ `\
-UPDATE graphile_worker_extension.job_dependencies SET is_ready = true
+UPDATE graphile_worker_helpers.job_dependencies SET is_ready = true
 WHERE NOT is_ready AND id = ANY($1)`,
         [readyJobIds]
       );
