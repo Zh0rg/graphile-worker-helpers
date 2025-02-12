@@ -1,0 +1,44 @@
+{
+  "name": "graphile-worker-extension",
+  "version": "1.0.0",
+  "description": "An extension of the graphile-worker package adding job hierarchy similar to BullMQ's Flow",
+  "packageManager": "pnpm@9.5.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zh0rg/graphile-worker-extension.git"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "graphile-worker",
+    "message-queue",
+    "extension",
+    "postgresql",
+    "postgres",
+    "pg"
+  ],
+  "author": "Théo Charron",
+  "license": "ISC",
+  "files": [
+    "dist",
+    "migrations"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.12.0",
+    "@types/pg": "^8.11.11",
+    "graphile-worker": "^0.16.6",
+    "pg": "^8.13.1",
+    "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "@types/pg": "^8.11.11",
+    "graphile-worker": "^0.16.6",
+    "pg": "^8.13.1"
+  },
+  "dependencies": {
+    "postgrator": "^8.0.0"
+  }
+}
