@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "Helpers for graphile-worker that add job dependencies (hierarchical workflows) and support saving intermediary results for improved job recovery and progress management.",
   "packageManager": "pnpm@9.5.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Zh0rg/graphile-worker-extension.git"
-  },
+  "repository": "github:Zh0rg/graphile-worker-helpers",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -15,7 +12,7 @@
   "keywords": [
     "graphile-worker",
     "message-queue",
-    "extension",
+    "helpers",
     "postgresql",
     "postgres",
     "pg"
