@@ -43,11 +43,11 @@ async function main() {
         preset: graphileConfig
     })
     
-    await workerUtils.withPgClient(graphileWorkerExtensionSetup)
+    await workerUtils.withPgClient(graphileWorkerExtensionSetup())
     
     // Create some jobs...
     
-    await workerUtils.withPgClient(graphileWorkerExtensionRemove)
+    await workerUtils.withPgClient(graphileWorkerExtensionRemove())
     await workerUtils.release()
 }
 
