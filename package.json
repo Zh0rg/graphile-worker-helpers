@@ -1,6 +1,6 @@
 {
   "name": "graphile-worker-helpers",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Helpers for graphile-worker that add job dependencies (hierarchical workflows) and support saving intermediary results for improved job recovery and progress management.",
   "packageManager": "pnpm@9.5.0",
   "homepage": "https://github.com/Zh0rg/graphile-worker-helpers#readme",
