@@ -19,7 +19,7 @@
     "pg"
   ],
   "author": "Théo Charron",
-  "license": "ISC",
+  "license": "MIT",
   "files": [
     "dist",
     "migrations"
